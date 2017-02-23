@@ -15,7 +15,7 @@ const UserSchema = new Schema({
     },
     required: [true, 'Name is required.']
   },
-  posts: [PostSchema],
+  posts: [PostSchema], //subdocuments, will replace with BlogPosts Schema, but keep this
   likes: Number
 });
 

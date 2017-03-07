@@ -13,7 +13,8 @@ module.exports = (criteria, sortProperty, offset = 0, limit = 20) => {
     .sort({ [sortProperty]: 1 })
     .skip(offset)
     .limit(limit);
-  return Promise.all([query, Artist.count()])
+
+  return Promise.all([query, Artist.find(buildQuery(criteria)).count()])
     .then((results) => {
       return {
         all: results[0],
@@ -33,7 +34,7 @@ const buildQuery = (criteria) => {
       $search: criteria.name
     }
   }
-  
+
   if(criteria.age) {
     query.age = {
       $gte: criteria.age.min,

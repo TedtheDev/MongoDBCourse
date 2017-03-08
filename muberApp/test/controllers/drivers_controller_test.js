@@ -17,6 +17,6 @@ describe('Drivers controller', () => {
             done();
           });
         });
-    })
+    });
   });
 });

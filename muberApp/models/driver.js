@@ -1,4 +1,5 @@
-const mongoose, { Schema } = require('mongoose');
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
 const DriverSchema = new Schema({
   email: {
@@ -6,7 +7,7 @@ const DriverSchema = new Schema({
     required: true
   },
   driving: {
-    type: boolean
+    type: Boolean,
     default: false
   }
 });

@@ -9,4 +9,8 @@ module.exports = (app) => {
   // to the route https://localhost:3050/api/drivers
   app.post('/api/drivers', DriversController.create);
 
+  // Watch for incoming requests of method UPDATE
+  // to the route https://localhost:3050/api/drivers
+  app.put('/api/drivers/:id', DriversController.edit);
+
 }

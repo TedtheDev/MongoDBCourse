@@ -55,7 +55,7 @@ describe('Drivers controller', () => {
       });
   });
 
-  it('GET to /api/drivers finds drivers in a location', done => {
+  it('GET to /api/drivers finds driver in a location', done => {
     const seattleDriver = new Driver({
       email: 'seattle@test.com',
       geometry: { type: 'Point', coordinates: [-122.4759902, 47.6147628] }

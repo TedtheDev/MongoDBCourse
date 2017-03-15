@@ -17,4 +17,8 @@ module.exports = (app) => {
   // to the route https://localhost:3050/api/drivers/id
   app.delete('/api/drivers/:id', DriversController.delete);
 
+  // Watch for incoming requests of method GET
+  // to the route https://localhost:3050/api/drivers
+  app.get('/api/drivers', DriversController.index);
+
 }
